@@ -1,0 +1,137 @@
+{
+  "battery_01.jpeg": {
+    "ground_truth_label": "battery",
+    "item_name": "Battery Cell / Hazard #1",
+    "suggested_stream": "Hazardous / Special"
+  },
+  "battery_02.jpeg": {
+    "ground_truth_label": "battery",
+    "item_name": "Battery Cell / Hazard #2",
+    "suggested_stream": "Hazardous / Special"
+  },
+  "battery_03.jpg": {
+    "ground_truth_label": "battery",
+    "item_name": "Battery Cell / Hazard #3",
+    "suggested_stream": "Hazardous / Special"
+  },
+  "cardboard_01.jpg": {
+    "ground_truth_label": "cardboard",
+    "item_name": "Corrugated Packaging Box #1",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "cardboard_02.jpg": {
+    "ground_truth_label": "cardboard",
+    "item_name": "Corrugated Packaging Box #2",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "cardboard_03.jpg": {
+    "ground_truth_label": "cardboard",
+    "item_name": "Corrugated Packaging Box #3",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "food_waste_01.jpg": {
+    "ground_truth_label": "food_waste",
+    "item_name": "Food Scraps & Organics #1",
+    "suggested_stream": "Wet Organic"
+  },
+  "food_waste_02.jpg": {
+    "ground_truth_label": "food_waste",
+    "item_name": "Food Scraps & Organics #2",
+    "suggested_stream": "Wet Organic"
+  },
+  "food_waste_03.jpg": {
+    "ground_truth_label": "food_waste",
+    "item_name": "Food Scraps & Organics #3",
+    "suggested_stream": "Wet Organic"
+  },
+  "glass_bottle_01.jpg": {
+    "ground_truth_label": "glass_bottle",
+    "item_name": "Glass Container Bottle #1",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "glass_bottle_02.jpg": {
+    "ground_truth_label": "glass_bottle",
+    "item_name": "Glass Container Bottle #2",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "glass_bottle_03.jpg": {
+    "ground_truth_label": "glass_bottle",
+    "item_name": "Glass Container Bottle #3",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "metal_can_01.jpg": {
+    "ground_truth_label": "metal_can",
+    "item_name": "Beverage Aluminum / Tin Can #1",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "metal_can_02.jpg": {
+    "ground_truth_label": "metal_can",
+    "item_name": "Beverage Aluminum / Tin Can #2",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "metal_can_03.jpg": {
+    "ground_truth_label": "metal_can",
+    "item_name": "Beverage Aluminum / Tin Can #3",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "multi_layer_packaging_01.jpg": {
+    "ground_truth_label": "multi_layer_packaging",
+    "item_name": "Multi-layer Foil Wrapper (MLP) #1",
+    "suggested_stream": "Reject (RDF)"
+  },
+  "multi_layer_packaging_02.jpg": {
+    "ground_truth_label": "multi_layer_packaging",
+    "item_name": "Multi-layer Foil Wrapper (MLP) #2",
+    "suggested_stream": "Reject (RDF)"
+  },
+  "multi_layer_packaging_03.jpg": {
+    "ground_truth_label": "multi_layer_packaging",
+    "item_name": "Multi-layer Foil Wrapper (MLP) #3",
+    "suggested_stream": "Reject (RDF)"
+  },
+  "paper_01.jpg": {
+    "ground_truth_label": "paper",
+    "item_name": "Clean Paper Sheet / Print #1",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "paper_02.jpg": {
+    "ground_truth_label": "paper",
+    "item_name": "Clean Paper Sheet / Print #2",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "paper_03.jpg": {
+    "ground_truth_label": "paper",
+    "item_name": "Clean Paper Sheet / Print #3",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "plastic_bottle_01.jpg": {
+    "ground_truth_label": "plastic_bottle",
+    "item_name": "PET / HDPE Plastic Bottle #1",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "plastic_bottle_02.jpg": {
+    "ground_truth_label": "plastic_bottle",
+    "item_name": "PET / HDPE Plastic Bottle #2",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "plastic_bottle_03.jpg": {
+    "ground_truth_label": "plastic_bottle",
+    "item_name": "PET / HDPE Plastic Bottle #3",
+    "suggested_stream": "Dry Recyclable"
+  },
+  "vegetable_scrap_01.jpg": {
+    "ground_truth_label": "vegetable_scrap",
+    "item_name": "Raw Kitchen Vegetable Scrap #1",
+    "suggested_stream": "Wet Organic"
+  },
+  "vegetable_scrap_02.jpg": {
+    "ground_truth_label": "vegetable_scrap",
+    "item_name": "Raw Kitchen Vegetable Scrap #2",
+    "suggested_stream": "Wet Organic"
+  },
+  "vegetable_scrap_03.jpg": {
+    "ground_truth_label": "vegetable_scrap",
+    "item_name": "Raw Kitchen Vegetable Scrap #3",
+    "suggested_stream": "Wet Organic"
+  }
+}

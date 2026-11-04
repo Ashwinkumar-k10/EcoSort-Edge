@@ -1,0 +1,14 @@
+# Ignore large datasets and virtual environment artifacts
+data/processed/
+data/raw/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+*.log
+scratch/
+results/test_smoke/
+results/test_smoke_out/
