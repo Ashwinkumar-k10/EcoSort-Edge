@@ -1,0 +1,396 @@
+{
+  "hardware_platform": "Raspberry Pi 5 (4x Cortex-A76 @ 2.4 GHz) / Host Evaluator",
+  "model_metadata": {
+    "name": "MobileNetV3-Large-EcoSort",
+    "weights": "models/friend_waste_classifier_int8.pte",
+    "input_resolution": "256x256",
+    "quantization_target": "INT8 (XNNPACK / ExecuTorch)",
+    "size_mb": 2.41,
+    "average_latency_ms": 7.34,
+    "throughput_fps": 136.2
+  },
+  "accuracy_summary": {
+    "total_tested": 27,
+    "correct_predictions": 27,
+    "accuracy_percentage": 100.0,
+    "per_class_accuracy": {
+      "battery": {
+        "accuracy_pct": 100.0,
+        "correct": 3,
+        "total": 3
+      },
+      "cardboard": {
+        "accuracy_pct": 100.0,
+        "correct": 3,
+        "total": 3
+      },
+      "food_waste": {
+        "accuracy_pct": 100.0,
+        "correct": 3,
+        "total": 3
+      },
+      "glass_bottle": {
+        "accuracy_pct": 100.0,
+        "correct": 3,
+        "total": 3
+      },
+      "metal_can": {
+        "accuracy_pct": 100.0,
+        "correct": 3,
+        "total": 3
+      },
+      "multi_layer_packaging": {
+        "accuracy_pct": 100.0,
+        "correct": 3,
+        "total": 3
+      },
+      "paper": {
+        "accuracy_pct": 100.0,
+        "correct": 3,
+        "total": 3
+      },
+      "plastic_bottle": {
+        "accuracy_pct": 100.0,
+        "correct": 3,
+        "total": 3
+      },
+      "vegetable_scrap": {
+        "accuracy_pct": 100.0,
+        "correct": 3,
+        "total": 3
+      }
+    }
+  },
+  "confidence_tier_distribution": {
+    "HAZARD_ALERT": 3,
+    "HIGH": 15,
+    "MANUAL_CHECK": 2,
+    "CAUTION": 7
+  },
+  "evaluations": [
+    {
+      "image": "battery_01.jpeg",
+      "relative_path": "battery_01.jpeg",
+      "predicted_category": "battery",
+      "confidence": "97.7%",
+      "confidence_tier": "HAZARD_ALERT",
+      "suggested_stream": "Hazardous / Special-Care",
+      "action_guidance": "SAFETY HOLD: Potential battery detected. Isolate manually to prevent compactor fire.",
+      "ground_truth": "battery",
+      "match": true,
+      "latency_ms": 13.37
+    },
+    {
+      "image": "battery_02.jpeg",
+      "relative_path": "battery_02.jpeg",
+      "predicted_category": "battery",
+      "confidence": "93.1%",
+      "confidence_tier": "HAZARD_ALERT",
+      "suggested_stream": "Hazardous / Special-Care",
+      "action_guidance": "SAFETY HOLD: Potential battery detected. Isolate manually to prevent compactor fire.",
+      "ground_truth": "battery",
+      "match": true,
+      "latency_ms": 1.86
+    },
+    {
+      "image": "battery_03.jpg",
+      "relative_path": "battery_03.jpg",
+      "predicted_category": "battery",
+      "confidence": "91.3%",
+      "confidence_tier": "HAZARD_ALERT",
+      "suggested_stream": "Hazardous / Special-Care",
+      "action_guidance": "SAFETY HOLD: Potential battery detected. Isolate manually to prevent compactor fire.",
+      "ground_truth": "battery",
+      "match": true,
+      "latency_ms": 1.73
+    },
+    {
+      "image": "cardboard_01.jpg",
+      "relative_path": "cardboard_01.jpg",
+      "predicted_category": "cardboard",
+      "confidence": "97.7%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Keep dry and flatten for paperboard recovery",
+      "ground_truth": "cardboard",
+      "match": true,
+      "latency_ms": 4.11
+    },
+    {
+      "image": "cardboard_02.jpg",
+      "relative_path": "cardboard_02.jpg",
+      "predicted_category": "cardboard",
+      "confidence": "86.9%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Keep dry and flatten for paperboard recovery",
+      "ground_truth": "cardboard",
+      "match": true,
+      "latency_ms": 5.1
+    },
+    {
+      "image": "cardboard_03.jpg",
+      "relative_path": "cardboard_03.jpg",
+      "predicted_category": "cardboard",
+      "confidence": "62.6%",
+      "confidence_tier": "MANUAL_CHECK",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Low confidence (62.6%). Request worker visual verification to avoid batch contamination.",
+      "ground_truth": "cardboard",
+      "match": true,
+      "latency_ms": 2.73
+    },
+    {
+      "image": "food_waste_01.jpg",
+      "relative_path": "food_waste_01.jpg",
+      "predicted_category": "food_waste",
+      "confidence": "97.8%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Wet Organic",
+      "action_guidance": "Place in wet/compost bin for biomethanation",
+      "ground_truth": "food_waste",
+      "match": true,
+      "latency_ms": 16.39
+    },
+    {
+      "image": "food_waste_02.jpg",
+      "relative_path": "food_waste_02.jpg",
+      "predicted_category": "food_waste",
+      "confidence": "78.5%",
+      "confidence_tier": "CAUTION",
+      "suggested_stream": "Wet Organic",
+      "action_guidance": "Moderate confidence (78.5%). Place in wet/compost bin for biomethanation. Verify item is clean.",
+      "ground_truth": "food_waste",
+      "match": true,
+      "latency_ms": 9.32
+    },
+    {
+      "image": "food_waste_03.jpg",
+      "relative_path": "food_waste_03.jpg",
+      "predicted_category": "food_waste",
+      "confidence": "98.9%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Wet Organic",
+      "action_guidance": "Place in wet/compost bin for biomethanation",
+      "ground_truth": "food_waste",
+      "match": true,
+      "latency_ms": 10.08
+    },
+    {
+      "image": "glass_bottle_01.jpg",
+      "relative_path": "glass_bottle_01.jpg",
+      "predicted_category": "glass_bottle",
+      "confidence": "70.7%",
+      "confidence_tier": "CAUTION",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Moderate confidence (70.7%). Handle intact; deposit in glass cullet bin. Verify item is clean.",
+      "ground_truth": "glass_bottle",
+      "match": true,
+      "latency_ms": 15.1
+    },
+    {
+      "image": "glass_bottle_02.jpg",
+      "relative_path": "glass_bottle_02.jpg",
+      "predicted_category": "glass_bottle",
+      "confidence": "97.0%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Handle intact; deposit in glass cullet bin",
+      "ground_truth": "glass_bottle",
+      "match": true,
+      "latency_ms": 6.98
+    },
+    {
+      "image": "glass_bottle_03.jpg",
+      "relative_path": "glass_bottle_03.jpg",
+      "predicted_category": "glass_bottle",
+      "confidence": "77.9%",
+      "confidence_tier": "CAUTION",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Moderate confidence (77.9%). Handle intact; deposit in glass cullet bin. Verify item is clean.",
+      "ground_truth": "glass_bottle",
+      "match": true,
+      "latency_ms": 10.31
+    },
+    {
+      "image": "metal_can_01.jpg",
+      "relative_path": "metal_can_01.jpg",
+      "predicted_category": "metal_can",
+      "confidence": "97.4%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Rinse clean and deposit in metal recycling bin",
+      "ground_truth": "metal_can",
+      "match": true,
+      "latency_ms": 6.48
+    },
+    {
+      "image": "metal_can_02.jpg",
+      "relative_path": "metal_can_02.jpg",
+      "predicted_category": "metal_can",
+      "confidence": "98.6%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Rinse clean and deposit in metal recycling bin",
+      "ground_truth": "metal_can",
+      "match": true,
+      "latency_ms": 8.31
+    },
+    {
+      "image": "metal_can_03.jpg",
+      "relative_path": "metal_can_03.jpg",
+      "predicted_category": "metal_can",
+      "confidence": "89.3%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Rinse clean and deposit in metal recycling bin",
+      "ground_truth": "metal_can",
+      "match": true,
+      "latency_ms": 9.32
+    },
+    {
+      "image": "multi_layer_packaging_01.jpg",
+      "relative_path": "multi_layer_packaging_01.jpg",
+      "predicted_category": "multi_layer_packaging",
+      "confidence": "82.9%",
+      "confidence_tier": "CAUTION",
+      "suggested_stream": "Non-Recyclable Reject",
+      "action_guidance": "Moderate confidence (82.9%). Divert to Refuse-Derived Fuel (RDF) / co-processing. Verify item is clean.",
+      "ground_truth": "multi_layer_packaging",
+      "match": true,
+      "latency_ms": 13.57
+    },
+    {
+      "image": "multi_layer_packaging_02.jpg",
+      "relative_path": "multi_layer_packaging_02.jpg",
+      "predicted_category": "multi_layer_packaging",
+      "confidence": "89.4%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Non-Recyclable Reject",
+      "action_guidance": "Divert to Refuse-Derived Fuel (RDF) / co-processing",
+      "ground_truth": "multi_layer_packaging",
+      "match": true,
+      "latency_ms": 8.15
+    },
+    {
+      "image": "multi_layer_packaging_03.jpg",
+      "relative_path": "multi_layer_packaging_03.jpg",
+      "predicted_category": "multi_layer_packaging",
+      "confidence": "98.9%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Non-Recyclable Reject",
+      "action_guidance": "Divert to Refuse-Derived Fuel (RDF) / co-processing",
+      "ground_truth": "multi_layer_packaging",
+      "match": true,
+      "latency_ms": 6.7
+    },
+    {
+      "image": "paper_01.jpg",
+      "relative_path": "paper_01.jpg",
+      "predicted_category": "paper",
+      "confidence": "86.5%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Deposit in clean paper recycling bin",
+      "ground_truth": "paper",
+      "match": true,
+      "latency_ms": 8.54
+    },
+    {
+      "image": "paper_02.jpg",
+      "relative_path": "paper_02.jpg",
+      "predicted_category": "paper",
+      "confidence": "53.3%",
+      "confidence_tier": "MANUAL_CHECK",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Low confidence (53.3%). Request worker visual verification to avoid batch contamination.",
+      "ground_truth": "paper",
+      "match": true,
+      "latency_ms": 10.66
+    },
+    {
+      "image": "paper_03.jpg",
+      "relative_path": "paper_03.jpg",
+      "predicted_category": "paper",
+      "confidence": "99.5%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Deposit in clean paper recycling bin",
+      "ground_truth": "paper",
+      "match": true,
+      "latency_ms": 1.6
+    },
+    {
+      "image": "plastic_bottle_01.jpg",
+      "relative_path": "plastic_bottle_01.jpg",
+      "predicted_category": "plastic_bottle",
+      "confidence": "73.8%",
+      "confidence_tier": "CAUTION",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Moderate confidence (73.8%). Empty liquids and deposit in dry recyclable bin. Verify item is clean.",
+      "ground_truth": "plastic_bottle",
+      "match": true,
+      "latency_ms": 1.63
+    },
+    {
+      "image": "plastic_bottle_02.jpg",
+      "relative_path": "plastic_bottle_02.jpg",
+      "predicted_category": "plastic_bottle",
+      "confidence": "82.8%",
+      "confidence_tier": "CAUTION",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Moderate confidence (82.8%). Empty liquids and deposit in dry recyclable bin. Verify item is clean.",
+      "ground_truth": "plastic_bottle",
+      "match": true,
+      "latency_ms": 5.04
+    },
+    {
+      "image": "plastic_bottle_03.jpg",
+      "relative_path": "plastic_bottle_03.jpg",
+      "predicted_category": "plastic_bottle",
+      "confidence": "82.0%",
+      "confidence_tier": "CAUTION",
+      "suggested_stream": "Dry Recyclable",
+      "action_guidance": "Moderate confidence (82.0%). Empty liquids and deposit in dry recyclable bin. Verify item is clean.",
+      "ground_truth": "plastic_bottle",
+      "match": true,
+      "latency_ms": 2.44
+    },
+    {
+      "image": "vegetable_scrap_01.jpg",
+      "relative_path": "vegetable_scrap_01.jpg",
+      "predicted_category": "vegetable_scrap",
+      "confidence": "99.1%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Wet Organic",
+      "action_guidance": "Place in organic composting stream",
+      "ground_truth": "vegetable_scrap",
+      "match": true,
+      "latency_ms": 2.2
+    },
+    {
+      "image": "vegetable_scrap_02.jpg",
+      "relative_path": "vegetable_scrap_02.jpg",
+      "predicted_category": "vegetable_scrap",
+      "confidence": "92.8%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Wet Organic",
+      "action_guidance": "Place in organic composting stream",
+      "ground_truth": "vegetable_scrap",
+      "match": true,
+      "latency_ms": 2.04
+    },
+    {
+      "image": "vegetable_scrap_03.jpg",
+      "relative_path": "vegetable_scrap_03.jpg",
+      "predicted_category": "vegetable_scrap",
+      "confidence": "97.8%",
+      "confidence_tier": "HIGH",
+      "suggested_stream": "Wet Organic",
+      "action_guidance": "Place in organic composting stream",
+      "ground_truth": "vegetable_scrap",
+      "match": true,
+      "latency_ms": 14.45
+    }
+  ]
+}
