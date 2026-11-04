@@ -20,17 +20,18 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
 import torch
 import torch.nn as nn
 
-# Register dummy torchvision meta ops to resolve C++ DLL symbol binding on Windows
-for op_sig in [
-    ('torchvision::nms', '(Tensor corners, Tensor scores, float iou_threshold) -> Tensor'),
-    ('torchvision::qnms', '(Tensor corners, Tensor scores, float iou_threshold) -> Tensor'),
-    ('torchvision::roi_align', '(Tensor input, Tensor rois, float spatial_scale, int pooled_height, int pooled_width, int sampling_ratio, bool aligned) -> Tensor'),
-    ('torchvision::roi_pool', '(Tensor input, Tensor rois, float spatial_scale, int pooled_height, int pooled_width) -> (Tensor, Tensor)')
-]:
-    try:
-        torch.library.define(op_sig[0], op_sig[1])
-    except Exception:
-        pass
+# Register dummy torchvision meta ops to resolve C++ DLL symbol binding on Windows only
+if sys.platform == "win32":
+    for op_sig in [
+        ('torchvision::nms', '(Tensor corners, Tensor scores, float iou_threshold) -> Tensor'),
+        ('torchvision::qnms', '(Tensor corners, Tensor scores, float iou_threshold) -> Tensor'),
+        ('torchvision::roi_align', '(Tensor input, Tensor rois, float spatial_scale, int pooled_height, int pooled_width, int sampling_ratio, bool aligned) -> Tensor'),
+        ('torchvision::roi_pool', '(Tensor input, Tensor rois, float spatial_scale, int pooled_height, int pooled_width) -> (Tensor, Tensor)')
+    ]:
+        try:
+            torch.library.define(op_sig[0], op_sig[1])
+        except Exception:
+            pass
 
 from torchvision import models, transforms
 from scripts.decision_engine import ConfidenceAwareDecisionEngine
