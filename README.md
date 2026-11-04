@@ -7,11 +7,6 @@
 [![Fire Safety Standard](https://img.shields.io/badge/Battery%20Hazard%20Recall-100.0%25-B22222?style=for-the-badge)](#)
 [![Physical Sorting](https://img.shields.io/badge/4--Stream%20Accuracy-96.30%25-2E8B57?style=for-the-badge)](#)
 
-> **Bharat AI-SoC Challenge / Namma AI Hackathon**  
-> **Track**: Problem Statement 3 — Artificial Intelligence for Sustainability  
-> **Author**: Ashwin Kumar K (`Ashwinkumar-k10`)  
-> **Production Status**: Validated on-device, fully compliant with Deliverables D1–D5.
-
 ---
 
 ## Executive Overview
