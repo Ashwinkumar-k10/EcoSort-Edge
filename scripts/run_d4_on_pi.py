@@ -27,7 +27,7 @@ test_dir = Path("data/test_27_samples")
 if not test_dir.exists():
     test_dir = Path("data/smoke_test")
 
-model_path = Path("models/mobilenetv3_large_int8.pte")
+model_path = Path("models/waste_classifier_int8.pte")
 if not model_path.exists():
     print(f"[!] Error: {model_path} not found!")
     exit(1)

@@ -23,7 +23,6 @@ jobs:
         run: |
           echo "Verifying compiled ExecuTorch INT8 binaries..."
           test -f models/waste_classifier_int8.pte || exit 1
-          test -f models/mobilenetv3_large_int8.pte || exit 1
           echo "Verifying 30-sample canonical benchmark suite..."
           test -f benchmark_30/ground_truth.json || exit 1
           python -c "

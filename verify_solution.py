@@ -39,7 +39,6 @@ def main():
     # 1. Model Binary Verification
     print("[1/5] Auditing Model Binaries...")
     pte_model = MODELS_DIR / "waste_classifier_int8.pte"
-    large_model = MODELS_DIR / "mobilenetv3_large_int8.pte"
     
     if pte_model.exists():
         size_mb = pte_model.stat().st_size / (1024 * 1024)

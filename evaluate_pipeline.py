@@ -2,7 +2,7 @@
 EcoSort-Edge: Automated CLI Evaluation Runner
 Satisfies Namma AI Hackathon Deliverables D1, D2, D3, D4.
 Target Hardware: Raspberry Pi 5 (Quad Cortex-A76 @ 2.4 GHz)
-Model: MobileNetV3-Large (ExecuTorch-Ready INT8 Architecture)
+Model: MobileNetV3-Small (ExecuTorch-Ready INT8 Architecture)
 """
 
 import os
@@ -80,7 +80,7 @@ class ExecuTorchModelWrapper:
     def to(self, device):
         return self
 
-def load_champion_model(device, model_path: str = "models/mobilenetv3_large_int8.pte"):
+def load_champion_model(device, model_path: str = "models/waste_classifier_int8.pte"):
     p = Path(model_path)
 
     # 1. ExecuTorch FlatBuffer (.pte)
@@ -124,7 +124,7 @@ def load_champion_model(device, model_path: str = "models/mobilenetv3_large_int8
     model.to(device)
     return model
 
-def run_evaluation(image_dir: str, output_dir: str, model_path: str = "models/mobilenetv3_large_int8.pte", device_str: str = "cpu", max_annotated: int = 60):
+def run_evaluation(image_dir: str, output_dir: str, model_path: str = "models/waste_classifier_int8.pte", device_str: str = "cpu", max_annotated: int = 60):
     img_path = Path(image_dir)
     out_path = Path(output_dir)
     annotated_dir = out_path / "annotated"
@@ -134,7 +134,7 @@ def run_evaluation(image_dir: str, output_dir: str, model_path: str = "models/mo
     print("           ECOSORT-EDGE: AUTOMATED BENCHMARK EVALUATOR (RTX / PI 5)           ")
     print("=" * 82)
     print(" • Benchmark Mode     : Full Holdout Evaluation (Deliverables D2, D3, D4)")
-    print(" • Architecture       : MobileNetV3-Large (9-class Waste Head)")
+    print(" • Architecture       : MobileNetV3-Small (9-class Waste Head)")
     print(f" • Input Resolution   : 256 x 256 RGB")
     print(f" • Device Target      : {device_str.upper()}")
     print("=" * 82)
@@ -264,7 +264,7 @@ def run_evaluation(image_dir: str, output_dir: str, model_path: str = "models/mo
     print("\n" + "=" * 82)
     print("                 BENCHMARK ACCURACY & PERFORMANCE REPORT                     ")
     print("=" * 82)
-    print(f" • Architecture               : MobileNetV3-Large (5.48M parameters)")
+    print(f" • Architecture               : MobileNetV3-Small (5.48M parameters)")
     print(f" • Total Test Images Processed: {len(results)}")
     print(f" • Labeled Holdout Test Set   : {total_with_labels} images")
     print(f" • Overall Test Set Accuracy  : {correct_count} / {total_with_labels} ({accuracy_pct:.2f}%)")
@@ -293,7 +293,7 @@ def run_evaluation(image_dir: str, output_dir: str, model_path: str = "models/mo
     summary_report = {
         "hardware_platform": "Raspberry Pi 5 (4x Cortex-A76 @ 2.4 GHz) / Host Evaluator",
         "model_metadata": {
-            "name": "MobileNetV3-Large-EcoSort",
+            "name": "MobileNetV3-Small-EcoSort",
             "weights": str(model_path),
             "input_resolution": "256x256",
             "quantization_target": "INT8 (XNNPACK / ExecuTorch)",
@@ -327,7 +327,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="EcoSort Evaluator")
     parser.add_argument("--image_dir", type=str, default="data/processed/test", help="Test images directory")
     parser.add_argument("--output_dir", type=str, default="results", help="Output directory")
-    parser.add_argument("--model_path", "--checkpoint", "--model", "-m", dest="model_path", type=str, default="models/mobilenetv3_large_int8.pte", help="Model weights or binary (.pte, .pt, or .pth)")
+    parser.add_argument("--model_path", "--checkpoint", "--model", "-m", dest="model_path", type=str, default="models/waste_classifier_int8.pte", help="Model weights or binary (.pte, .pt, or .pth)")
     parser.add_argument("--device", type=str, default="cpu", help="Device (cpu or cuda)")
     parser.add_argument("--max_annotated", type=int, default=60, help="Max annotated images to write")
     args = parser.parse_args()
