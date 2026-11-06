@@ -1,0 +1,54 @@
+{
+  "raw_total": 8079,
+  "exact_duplicates_dropped": 3,
+  "near_duplicates_dropped": 62,
+  "corrupt_dropped": 0,
+  "clean_total": 8014,
+  "per_class": {
+    "battery": {
+      "train": 274,
+      "val": 58,
+      "test": 60
+    },
+    "cardboard": {
+      "train": 601,
+      "val": 128,
+      "test": 130
+    },
+    "food_waste": {
+      "train": 567,
+      "val": 121,
+      "test": 122
+    },
+    "glass_bottle": {
+      "train": 642,
+      "val": 137,
+      "test": 139
+    },
+    "metal_can": {
+      "train": 835,
+      "val": 178,
+      "test": 180
+    },
+    "multi_layer_packaging": {
+      "train": 663,
+      "val": 142,
+      "test": 143
+    },
+    "paper": {
+      "train": 742,
+      "val": 159,
+      "test": 159
+    },
+    "plastic_bottle": {
+      "train": 978,
+      "val": 209,
+      "test": 211
+    },
+    "vegetable_scrap": {
+      "train": 305,
+      "val": 65,
+      "test": 66
+    }
+  }
+}

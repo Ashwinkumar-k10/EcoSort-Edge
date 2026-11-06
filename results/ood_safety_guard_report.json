@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-11-06T20:45:00Z",
+  "audit_name": "EcoSort-Edge OOD and Safety Guard Verification",
+  "policy_version": "SWM 2026 v2.0",
+  "all_passed": true,
+  "test_results": [
+    {
+      "scenario": "In-Distribution Normal Waste",
+      "input_class": "metal_can",
+      "confidence": 0.92,
+      "entropy": 0.63,
+      "routed_stream": "dry",
+      "status": "STATUTORY_ROUTED",
+      "passed": true
+    },
+    {
+      "scenario": "Out-of-Distribution / Foreign Object (The Shoe Test)",
+      "input_class": "multi_layer_packaging (ambiguous)",
+      "confidence": 0.18,
+      "entropy": 3.11,
+      "routed_stream": "reject",
+      "status": "OOD_HIGH_ENTROPY_REJECTED",
+      "passed": true
+    },
+    {
+      "scenario": "Borderline Battery Fire Hazard (72% Confidence)",
+      "input_class": "battery",
+      "confidence": 0.72,
+      "entropy": 0.85,
+      "routed_stream": "special_care",
+      "status": "SAFETY_HAZARD_ISOLATION",
+      "passed": true
+    },
+    {
+      "scenario": "Sanitary Privacy Mechanical Bypass (DPDP Act 2023)",
+      "input_class": "tactile_override",
+      "confidence": 1.0,
+      "entropy": 0.0,
+      "routed_stream": "sanitary",
+      "status": "SANITARY_OVERRIDE",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-11-06T20:55:15Z",
+  "total_cycles": 200,
+  "duration_seconds": 1.17,
+  "throughput_fps": 170.9,
+  "latency_stats_ms": {
+    "mean": 5.83,
+    "p50": 5.8,
+    "p90": 6.25,
+    "p95": 6.33,
+    "p99": 7.27,
+    "min": 5.17,
+    "max": 7.78
+  },
+  "memory_audit_mb": {
+    "initial_rss": 57.22,
+    "final_rss": 57.24,
+    "growth_delta": 0.02,
+    "leak_free": true
+  },
+  "thermal_profile": {
+    "operating_core_temp_c": 49.9,
+    "throttle_limit_c": 80.0,
+    "headroom_c": 30.1,
+    "hardware_register": "0x0"
+  }
+}
