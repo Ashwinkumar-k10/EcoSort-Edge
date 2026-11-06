@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:14,000
+EcoSort-Edge: 100% Offline Waste Classification Appliance on Raspberry Pi 5 (Arm Cortex-A76)
+
+2
+00:00:14,000 --> 00:00:28,000
+Stage 1: Camera captures 256x256 RGB frames — ExecuTorch INT8 model executes in 5.09 ms (~197 FPS)
+
+3
+00:00:28,000 --> 00:00:44,000
+Stage 2: Deterministic Policy Guard classifies items under India MoEFCC SWM Rules 2026 across 4 legal streams
+
+4
+00:00:44,000 --> 00:00:60,000
+Safety Guard: 100% Battery Fire-Hazard Recall isolates lithium cells, preventing hydraulic baler fires
+
+5
+00:00:60,000 --> 00:01:20,000
+Empirical Results: 100% Statutory Accuracy | 5.09 ms Latency | 49.9°C Core Temp | Zero Cloud Calls

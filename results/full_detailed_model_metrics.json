@@ -1,0 +1,302 @@
+{
+  "overall_summary": {
+    "total_samples": 1095,
+    "overall_accuracy": 0.9041,
+    "macro_precision": 0.9106,
+    "macro_recall": 0.9164,
+    "macro_f1": 0.9122,
+    "weighted_precision": 0.9063,
+    "weighted_recall": 0.9041,
+    "weighted_f1": 0.904,
+    "physical_stream_accuracy": 0.968,
+    "battery_recall": 1.0,
+    "battery_precision": 0.963
+  },
+  "classes": [
+    "battery",
+    "cardboard",
+    "food_waste",
+    "glass_bottle",
+    "metal_can",
+    "multi_layer_packaging",
+    "paper",
+    "plastic_bottle",
+    "vegetable_scrap"
+  ],
+  "confusion_matrix_9x9": [
+    [
+      52,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      110,
+      0,
+      1,
+      5,
+      2,
+      7,
+      4,
+      0
+    ],
+    [
+      0,
+      0,
+      56,
+      0,
+      0,
+      1,
+      0,
+      0,
+      5
+    ],
+    [
+      0,
+      0,
+      0,
+      127,
+      6,
+      0,
+      0,
+      5,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      167,
+      8,
+      1,
+      2,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      5,
+      82,
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      4,
+      0,
+      2,
+      1,
+      2,
+      153,
+      1,
+      0
+    ],
+    [
+      1,
+      2,
+      1,
+      11,
+      9,
+      6,
+      2,
+      178,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      65
+    ]
+  ],
+  "per_class_metrics": {
+    "battery": {
+      "TP": 52,
+      "FP": 2,
+      "FN": 0,
+      "TN": 1041,
+      "Support": 52,
+      "Precision": 0.963,
+      "Recall": 1.0,
+      "Specificity": 0.9981,
+      "F1_Score": 0.9811
+    },
+    "cardboard": {
+      "TP": 110,
+      "FP": 7,
+      "FN": 19,
+      "TN": 959,
+      "Support": 129,
+      "Precision": 0.9402,
+      "Recall": 0.8527,
+      "Specificity": 0.9928,
+      "F1_Score": 0.8943
+    },
+    "food_waste": {
+      "TP": 56,
+      "FP": 1,
+      "FN": 6,
+      "TN": 1032,
+      "Support": 62,
+      "Precision": 0.9825,
+      "Recall": 0.9032,
+      "Specificity": 0.999,
+      "F1_Score": 0.9412
+    },
+    "glass_bottle": {
+      "TP": 127,
+      "FP": 17,
+      "FN": 11,
+      "TN": 940,
+      "Support": 138,
+      "Precision": 0.8819,
+      "Recall": 0.9203,
+      "Specificity": 0.9822,
+      "F1_Score": 0.9007
+    },
+    "metal_can": {
+      "TP": 167,
+      "FP": 26,
+      "FN": 13,
+      "TN": 889,
+      "Support": 180,
+      "Precision": 0.8653,
+      "Recall": 0.9278,
+      "Specificity": 0.9716,
+      "F1_Score": 0.8954
+    },
+    "multi_layer_packaging": {
+      "TP": 82,
+      "FP": 19,
+      "FN": 13,
+      "TN": 981,
+      "Support": 95,
+      "Precision": 0.8119,
+      "Recall": 0.8632,
+      "Specificity": 0.981,
+      "F1_Score": 0.8367
+    },
+    "paper": {
+      "TP": 153,
+      "FP": 11,
+      "FN": 11,
+      "TN": 920,
+      "Support": 164,
+      "Precision": 0.9329,
+      "Recall": 0.9329,
+      "Specificity": 0.9882,
+      "F1_Score": 0.9329
+    },
+    "plastic_bottle": {
+      "TP": 178,
+      "FP": 14,
+      "FN": 32,
+      "TN": 871,
+      "Support": 210,
+      "Precision": 0.9271,
+      "Recall": 0.8476,
+      "Specificity": 0.9842,
+      "F1_Score": 0.8856
+    },
+    "vegetable_scrap": {
+      "TP": 65,
+      "FP": 8,
+      "FN": 0,
+      "TN": 1022,
+      "Support": 65,
+      "Precision": 0.8904,
+      "Recall": 1.0,
+      "Specificity": 0.9922,
+      "F1_Score": 0.942
+    }
+  },
+  "streams": [
+    "Dry Recyclable",
+    "Wet Organic",
+    "Reject (RDF)",
+    "Hazardous / Special"
+  ],
+  "stream_confusion_matrix_4x4": [
+    [
+      800,
+      1,
+      18,
+      2
+    ],
+    [
+      0,
+      126,
+      1,
+      0
+    ],
+    [
+      10,
+      3,
+      82,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      52
+    ]
+  ],
+  "stream_metrics": {
+    "Dry Recyclable": {
+      "TP": 800,
+      "FP": 10,
+      "FN": 21,
+      "TN": 264,
+      "Support": 821,
+      "Precision": 0.9877,
+      "Recall": 0.9744,
+      "F1_Score": 0.981
+    },
+    "Wet Organic": {
+      "TP": 126,
+      "FP": 4,
+      "FN": 1,
+      "TN": 964,
+      "Support": 127,
+      "Precision": 0.9692,
+      "Recall": 0.9921,
+      "F1_Score": 0.9805
+    },
+    "Reject (RDF)": {
+      "TP": 82,
+      "FP": 19,
+      "FN": 13,
+      "TN": 981,
+      "Support": 95,
+      "Precision": 0.8119,
+      "Recall": 0.8632,
+      "F1_Score": 0.8367
+    },
+    "Hazardous / Special": {
+      "TP": 52,
+      "FP": 2,
+      "FN": 0,
+      "TN": 1041,
+      "Support": 52,
+      "Precision": 0.963,
+      "Recall": 1.0,
+      "F1_Score": 0.9811
+    }
+  }
+}

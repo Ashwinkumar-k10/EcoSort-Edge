@@ -1,14 +1,38 @@
-# Ignore large datasets and virtual environment artifacts
-data/processed/
-data/raw/
+# Data & Raw Datasets (Do NOT commit heavy image datasets to GitHub)
+data/
+archive/
+outputs/
+results/*
+!results/*.json
+temp/
+tmp/
+
+# Python & Environment
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
 .venv/
-venv/
 env/
-*.log
+venv/
+ENV/
+
+# OS & Office Lock Files
+.DS_Store
+Thumbs.db
+~$*.docx
+~$*.pptx
+
+# Large raw video in root (assets/ contains the web-optimized streamable video)
+/R1_Screen_recording.mp4
+/camara_rec.mp4
+
+# Only keep the quantized .pte deployment binaries in models/
+models/*.pth
+models/*.pt
+!models/waste_classifier_int8.pte
+!models/mobilenetv3_large_int8.pte
+
+models.zip
 scratch/
-results/test_smoke/
-results/test_smoke_out/
+ARM_1/

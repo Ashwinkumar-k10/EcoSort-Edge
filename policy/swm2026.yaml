@@ -1,0 +1,158 @@
+# ==============================================================================
+# EcoSort-Edge: Statutory Solid Waste Management Rules 2026 Policy Configuration
+# Authority: Ministry of Environment, Forest and Climate Change (MoEFCC)
+# Gazette Notification: 27 Jan 2026 | Effective Date: 01 April 2026
+# Mandatory 4 Streams: Wet, Dry, Sanitary, Special-Care + Internal REJECT Hold
+# ==============================================================================
+
+version: "SWM-2026-v2"
+authority: "MoEFCC Government of India"
+effective_date: "2026-04-01"
+
+streams:
+  wet:
+    id: "green_wet"
+    color_hex: "#2E7D32"
+    bin_name: "Green Bin (Wet Organic)"
+    labels:
+      en: "Wet Waste (Compostable)"
+      kn: "ಹಸಿ ಕಸ (ಕಾಂಪೋಸ್ಟ್‌ಗೆ)"
+      ta: "ஈரக் கழிவு (உரமாக்கல்)"
+      hi: "गीला कचरा (जैविक खाद)"
+    action: "compost_or_biogas"
+
+  dry:
+    id: "blue_dry"
+    color_hex: "#1565C0"
+    bin_name: "Blue Bin (Dry Recyclable)"
+    labels:
+      en: "Dry Waste (Recyclable)"
+      kn: "ಒಣ ಕಸ (ಮರುಬಳಕೆ)"
+      ta: "உலர் கழிவு (மறுசுழற்சி)"
+      hi: "सूखा कचरा (पुनर्चक्रण)"
+    action: "mrf_segregation"
+
+  sanitary:
+    id: "yellow_sanitary"
+    color_hex: "#F9A825"
+    bin_name: "Yellow Bin (Sanitary Wrapped)"
+    labels:
+      en: "Sanitary Waste (Securely Wrapped)"
+      kn: "ನೈರ್ಮಲ್ಯ ಕಸ (ಸುರಕ್ಷಿತವಾಗಿ ಸುತ್ತಿದ)"
+      ta: "சுகாதாரக் கழிவு (சுற்றப்பட்ட)"
+      hi: "सैनिटरी कचरा (सुरक्षित लपेटा)"
+    action: "safe_incineration"
+    privacy_mode: true  # Privacy-by-design: triggered via hardware button/override
+
+  special_care:
+    id: "red_special_care"
+    color_hex: "#C62828"
+    bin_name: "Red Bin (Special-Care / Domestic Hazardous)"
+    labels:
+      en: "Special-Care Waste (Hazardous)"
+      kn: "ವಿಶೇಷ ಆರೈಕೆ ಕಸ (ಅಪಾಯಕಾರಿ)"
+      ta: "சிறப்புக் கவனக் கழிவு (ஆபத்தானது)"
+      hi: "विशेष देखभाल कचरा (खतरनाक)"
+    action: "authorised_epr_takeback"
+
+  reject:
+    id: "grey_reject"
+    color_hex: "#616161"
+    bin_name: "Grey Bin (Hold / Manual Review)"
+    labels:
+      en: "Uncertain Waste (Hold for Triage)"
+      kn: "ಅಸ್ಪಷ್ಟ ತ್ಯಾಜ್ಯ (ಪರಿಶೀಲಿಸಿ)"
+      ta: "தெளிவற்ற கழிவு (சரிபார்க்கவும்)"
+      hi: "अस्पष्ट कचरा (जाँच के लिए रखें)"
+    action: "manual_inspection"
+
+# Fine-grained class mappings to SWM 2026 streams and handling flags
+classes:
+  food_waste:
+    stream: "wet"
+    hazard_level: "none"
+    flags: ["compostable"]
+    tip_en: "Organic food leftover. Suitable for kitchen composting or community biomethanation."
+    tip_kn: "ಆಹಾರದ ತ್ಯಾಜ್ಯ. ಗೊಬ್ಬರ ಅಥವಾ ಬಯೋ-ಗ್ಯಾಸ್‌ಗೆ ಸೂಕ್ತವಾಗಿದೆ."
+
+  vegetable_scrap:
+    stream: "wet"
+    hazard_level: "none"
+    flags: ["compostable"]
+    tip_en: "Raw fruit/vegetable peelings. Do not wrap in plastic bags."
+    tip_kn: "ತರಕಾರಿ ಮತ್ತು ಹಣ್ಣಿನ ಸಿಪ್ಪೆಗಳು. ಪ್ಲಾಸ್ಟಿಕ್ ಕವರ್‌ನಲ್ಲಿ ಹಾಕಬೇಡಿ."
+
+  plastic_bottle:
+    stream: "dry"
+    hazard_level: "none"
+    flags: ["recyclable", "rinse_if_soiled"]
+    tip_en: "PET/HDPE bottle. Empty liquid and crush before depositing."
+    tip_kn: "ಪ್ಲಾಸ್ಟಿಕ್ ಬಾಟಲ್. ದ್ರವವನ್ನು ಖಾಲಿ ಮಾಡಿ ಒಣ ಕಸದ ಬುಟ್ಟಿಗೆ ಹಾಕಿ."
+
+  metal_can:
+    stream: "dry"
+    hazard_level: "none"
+    flags: ["recyclable"]
+    tip_en: "Aluminium/tin can. 100% recyclable. Ensure container is empty."
+    tip_kn: "ಲೋಹದ ಕ್ಯಾನ್. ಸಂಪೂರ್ಣವಾಗಿ ಮರುಬಳಕೆ ಮಾಡಬಹುದಾಗಿದೆ."
+
+  cardboard:
+    stream: "dry"
+    hazard_level: "none"
+    flags: ["recyclable", "keep_dry"]
+    tip_en: "Clean cardboard packaging. Keep dry to prevent fibre degradation."
+    tip_kn: "ರಟ್ಟಿನ ಪೆಟ್ಟಿಗೆ. ಮರುಬಳಕೆಗಾಗಿ ಒಣಗಿಸಿ ಇರಿಸಿ."
+
+  paper:
+    stream: "dry"
+    hazard_level: "none"
+    flags: ["recyclable", "keep_dry"]
+    tip_en: "Clean waste paper and newspaper. Contaminated/oily paper cannot be recycled."
+    tip_kn: "ಸ್ವಚ್ಛ ಕಾಗದ. ಎಣ್ಣೆ ತಾಗಿದ ಕಾಗದವನ್ನು ಮರುಬಳಕೆ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ."
+
+  glass_bottle:
+    stream: "dry"
+    hazard_level: "low_puncture"
+    flags: ["recyclable", "handle_with_care"]
+    tip_en: "Glass container. Deposit carefully to avoid breakage and injury."
+    tip_kn: "ಗಾಜಿನ ಬಾಟಲಿ. ಒಡೆಯದಂತೆ ಎಚ್ಚರಿಕೆಯಿಂದ ಹಾಕಿ."
+
+  multi_layer_packaging:
+    stream: "dry"
+    hazard_level: "none"
+    flags: ["non_recyclable_at_mrf", "rdf_cement_coprocessing"]
+    tip_en: "Multi-layer plastic sachet/wrapper. Non-recyclable at MRF; routed to cement kilns for energy recovery."
+    tip_kn: "ಚಿಪ್ಸ್ ಮತ್ತು ಶಾಂಪೂ ಸ್ಯಾಚೆಟ್. ಸಿಮೆಂಟ್ ಕಾರ್ಖಾನೆಗಳಲ್ಲಿ ಇಂಧನವಾಗಿ ಮರುಬಳಕೆಯಾಗುತ್ತದೆ."
+
+  battery:
+    stream: "special_care"
+    hazard_level: "critical_fire"
+    flags: ["mandatory_isolation", "epr_battery_rules_2022"]
+    tip_en: "DANGER: Battery fire hazard! Never place in Dry/Wet bins. Hand over to authorised e-waste collection."
+    tip_kn: "ಎಚ್ಚರಿಕೆ: ಬ್ಯಾಟರಿ ಬೆಂಕಿಯ ಅಪಾಯ! ಒಣ ಅಥವಾ ಹಸಿ ಕಸದ ಬುಟ್ಟಿಗೆ ಹಾಕಬೇಡಿ. ವಿಶೇಷ ಕಸಕ್ಕೆ ನೀಡಿ."
+
+  sanitary_item:
+    stream: "sanitary"
+    hazard_level: "biohazard"
+    flags: ["securely_wrapped", "button_triggered"]
+    tip_en: "Sanitary hygiene item. Wrap securely in paper before disposal."
+    tip_kn: "ನೈರ್ಮಲ್ಯ ತ್ಯಾಜ್ಯ. ಕಾಗದದಲ್ಲಿ ಸುತ್ತಿ ಪ್ರತ್ಯೇಕವಾಗಿ ವಿಲೇವಾರಿ ಮಾಡಿ."
+
+# Cost Loss Matrix L(action, truth) for Cost-Sensitive Bayes Risk:
+# L(hazard_to_dry) = 1000 (Fire/Compactor failure)
+# L(soiled_to_dry) = 10 (Recyclate batch ruin)
+# L(reject_to_hold) = 1 (Minor human check cost)
+loss_matrix:
+  hazard_misroute_cost: 1000.0
+  contamination_cost: 10.0
+  unnecessary_reject_cost: 1.0
+
+# Calibrated Confidence Thresholds:
+# In a 9-class distribution, random chance is 1/9 = 11.1%.
+# A benign threshold of 0.50 represents Strict Majority Confidence (p_k > 50%),
+# ensuring the predicted class has more probability mass than all other 8 classes combined.
+# Any prediction below 50% represents genuine class ambiguity and safely diverts to reject.
+# Hazardous special-care items maintain a strict 0.85 threshold for safety isolation.
+thresholds:
+  benign_stream: 0.50
+  hazard_safety_hold: 0.85

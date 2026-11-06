@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software or benchmark suite in your research, please cite our technical paper."
+title: "EcoSort-Edge: Real-Time Offline Edge AI for Municipal Waste Sorting and Food Categorisation using ExecuTorch on Raspberry Pi 5"
+version: 1.0.0
+date-released: 2026-11-06
+authors:
+  - name: "EcoSort-Edge Research & Engineering Team"
+repository-code: "https://github.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi"
+license: MIT
+keywords:
+  - "Edge AI"
+  - "ExecuTorch"
+  - "Raspberry Pi 5"
+  - "Arm Cortex-A76"
+  - "NEON SIMD"
+  - "SDOT"
+  - "Model Quantization"
+  - "PT2E INT8"
+  - "Waste Sorting"
+  - "Solid Waste Management Rules 2026"

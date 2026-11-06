@@ -1,0 +1,8 @@
+# Tell Git and GitHub that these files are binary, not text/code
+*.pdf binary
+*.pte binary
+*.docx binary
+*.mp4 binary
+*.gif binary
+*.png binary
+*.jpg binary

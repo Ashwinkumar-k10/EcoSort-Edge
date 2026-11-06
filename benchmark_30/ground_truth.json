@@ -1,0 +1,182 @@
+[
+  {
+    "filename": "item_01_battery_01.jpg",
+    "true_class": "battery",
+    "statutory_stream": "special_care",
+    "sample_id": "item_01"
+  },
+  {
+    "filename": "item_02_battery_02.jpg",
+    "true_class": "battery",
+    "statutory_stream": "special_care",
+    "sample_id": "item_02"
+  },
+  {
+    "filename": "item_03_battery_03.jpg",
+    "true_class": "battery",
+    "statutory_stream": "special_care",
+    "sample_id": "item_03"
+  },
+  {
+    "filename": "item_04_cardboard_01.jpg",
+    "true_class": "cardboard",
+    "statutory_stream": "dry",
+    "sample_id": "item_04"
+  },
+  {
+    "filename": "item_05_cardboard_02.jpg",
+    "true_class": "cardboard",
+    "statutory_stream": "dry",
+    "sample_id": "item_05"
+  },
+  {
+    "filename": "item_06_cardboard_03.jpg",
+    "true_class": "cardboard",
+    "statutory_stream": "dry",
+    "sample_id": "item_06"
+  },
+  {
+    "filename": "item_07_food_waste_01.jpg",
+    "true_class": "food_waste",
+    "statutory_stream": "wet",
+    "sample_id": "item_07"
+  },
+  {
+    "filename": "item_08_food_waste_02.jpg",
+    "true_class": "food_waste",
+    "statutory_stream": "wet",
+    "sample_id": "item_08"
+  },
+  {
+    "filename": "item_09_food_waste_03.jpg",
+    "true_class": "food_waste",
+    "statutory_stream": "wet",
+    "sample_id": "item_09"
+  },
+  {
+    "filename": "item_10_food_waste_04.jpg",
+    "true_class": "food_waste",
+    "statutory_stream": "wet",
+    "sample_id": "item_10"
+  },
+  {
+    "filename": "item_11_glass_bottle_01.jpg",
+    "true_class": "glass_bottle",
+    "statutory_stream": "dry",
+    "sample_id": "item_11"
+  },
+  {
+    "filename": "item_12_glass_bottle_02.jpg",
+    "true_class": "glass_bottle",
+    "statutory_stream": "dry",
+    "sample_id": "item_12"
+  },
+  {
+    "filename": "item_13_glass_bottle_03.jpg",
+    "true_class": "glass_bottle",
+    "statutory_stream": "dry",
+    "sample_id": "item_13"
+  },
+  {
+    "filename": "item_14_metal_can_01.jpg",
+    "true_class": "metal_can",
+    "statutory_stream": "dry",
+    "sample_id": "item_14"
+  },
+  {
+    "filename": "item_15_metal_can_02.jpg",
+    "true_class": "metal_can",
+    "statutory_stream": "dry",
+    "sample_id": "item_15"
+  },
+  {
+    "filename": "item_16_metal_can_03.jpg",
+    "true_class": "metal_can",
+    "statutory_stream": "dry",
+    "sample_id": "item_16"
+  },
+  {
+    "filename": "item_17_multi_layer_packaging_01.jpg",
+    "true_class": "multi_layer_packaging",
+    "statutory_stream": "dry",
+    "sample_id": "item_17"
+  },
+  {
+    "filename": "item_18_multi_layer_packaging_02.jpg",
+    "true_class": "multi_layer_packaging",
+    "statutory_stream": "dry",
+    "sample_id": "item_18"
+  },
+  {
+    "filename": "item_19_multi_layer_packaging_03.jpg",
+    "true_class": "multi_layer_packaging",
+    "statutory_stream": "dry",
+    "sample_id": "item_19"
+  },
+  {
+    "filename": "item_20_multi_layer_packaging_04.jpg",
+    "true_class": "multi_layer_packaging",
+    "statutory_stream": "dry",
+    "sample_id": "item_20"
+  },
+  {
+    "filename": "item_21_paper_01.jpg",
+    "true_class": "paper",
+    "statutory_stream": "dry",
+    "sample_id": "item_21"
+  },
+  {
+    "filename": "item_22_paper_02.jpg",
+    "true_class": "paper",
+    "statutory_stream": "dry",
+    "sample_id": "item_22"
+  },
+  {
+    "filename": "item_23_paper_03.jpg",
+    "true_class": "paper",
+    "statutory_stream": "dry",
+    "sample_id": "item_23"
+  },
+  {
+    "filename": "item_24_plastic_bottle_01.jpg",
+    "true_class": "plastic_bottle",
+    "statutory_stream": "dry",
+    "sample_id": "item_24"
+  },
+  {
+    "filename": "item_25_plastic_bottle_02.jpg",
+    "true_class": "plastic_bottle",
+    "statutory_stream": "dry",
+    "sample_id": "item_25"
+  },
+  {
+    "filename": "item_26_plastic_bottle_03.jpg",
+    "true_class": "plastic_bottle",
+    "statutory_stream": "dry",
+    "sample_id": "item_26"
+  },
+  {
+    "filename": "item_27_plastic_bottle_04.jpg",
+    "true_class": "plastic_bottle",
+    "statutory_stream": "dry",
+    "sample_id": "item_27"
+  },
+  {
+    "filename": "item_28_vegetable_scrap_01.jpg",
+    "true_class": "vegetable_scrap",
+    "statutory_stream": "wet",
+    "sample_id": "item_28"
+  },
+  {
+    "filename": "item_29_vegetable_scrap_02.jpg",
+    "true_class": "vegetable_scrap",
+    "statutory_stream": "wet",
+    "sample_id": "item_29"
+  },
+  {
+    "filename": "item_30_vegetable_scrap_03.jpg",
+    "true_class": "vegetable_scrap",
+    "statutory_stream": "wet",
+    "sample_id": "item_30"
+  }
+]

@@ -1,0 +1,16 @@
+[Unit]
+Description=EcoSort-Edge Arm Cortex-A76 AI Waste Sorting Appliance
+After=network.target local-fs.target
+
+[Service]
+Type=simple
+User=pi5
+WorkingDirectory=/home/pi5/ecosort-edge
+ExecStart=/usr/bin/python evaluate_pipeline.py --daemon
+Restart=always
+RestartSec=2
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

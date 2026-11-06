@@ -1,0 +1,47 @@
+name: EcoSort-Edge CI Smoke Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Verify Model Binaries & Assets
+        run: |
+          echo "Verifying compiled ExecuTorch INT8 binaries..."
+          test -f models/waste_classifier_int8.pte || exit 1
+          test -f models/mobilenetv3_large_int8.pte || exit 1
+          echo "Verifying 30-sample canonical benchmark suite..."
+          test -f benchmark_30/ground_truth.json || exit 1
+          python -c "
+          import json, os
+          with open('benchmark_30/ground_truth.json') as f:
+              gt = json.load(f)
+          print(f'Verified {len(gt)} benchmark items.')
+          assert len(gt) == 30, 'Benchmark suite must contain 30 items'
+          for item in gt:
+              path = os.path.join('benchmark_30', item['filename'])
+              assert os.path.exists(path), f'Missing {path}'
+          print('All 30 benchmark images verified successfully.')
+          "
+
+      - name: Verify Documentation & Licenses
+        run: |
+          test -f LICENSE || exit 1
+          test -f CITATION.cff || exit 1
+          test -f THEME_3_NAMMA_AI.pdf || exit 1
+          test -f README.md || exit 1
+          echo "Core open-source governance and paper artifacts verified."
